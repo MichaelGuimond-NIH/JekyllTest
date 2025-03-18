@@ -19,7 +19,7 @@
         </a>
         <section id="pages">
             {%- for page in site.pages -%}
-                <a href="{{ page.url }}">{{ page.title | escape }}</a>&nbsp;
+                <a href="{{ page.url | relative_url }}">{{ page.title | escape }}</a>&nbsp;
             {%- endfor -%}
         </section>        
         <h2>{{ site.description | default: site.github.project_tagline }}</h2>
